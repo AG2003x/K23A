@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KFAM & AIGV</title>
+  <link rel="shortcut icon" href="img/logo.png">
+  <link rel="stylesheet" href="css/stylememories.css">
+</head>
+<body>
+  <img src="img/fondo.png" alt="Imagen de fondo" class="bg-image">
+  <div class="container">
+    <div class="image-container">
+      <img src="./img/img1.jpeg" alt="" id="imagenes">
+    </div>
+    <div class="text-section">
+      <div id="titulo">Memories <3</div>
+      <a href="sms2.html"><button>Siguiente --></button></a>
+    </div>
+  </div>
+
+<script>
+  const images = [
+    "./img/img2.jpeg",
+    "./img/img3.jpg",
+    "./img/img4.jpg",
+    "./img/img5.jpg",
+    "./img/img6.png",
+    "./img/img7.png",
+    "./img/img8.png",
+    "./img/img9.png",
+    "./img/img10.png",
+    "./img/img11.jpg",
+    "./img/img12.jpeg",
+    "./img/img1.jpeg"
+  ];
+
+  let currentImageIndex = 0;
+  const imagenes = document.getElementById("imagenes");
+
+  function CambiarImagenes() {
+    imagenes.src = images[currentImageIndex];
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+  }
+
+  // Cambia la imagen cada 3 segundos
+  setInterval(CambiarImagenes, 3000); // (3000 milisegundos)
+</script>
+
+
+</body>
+</html>
